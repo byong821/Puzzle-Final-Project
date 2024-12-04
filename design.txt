@@ -1,0 +1,28 @@
+Brandan Yong
+CS 5001 SP 2024
+Dr. Bagley
+Final Project: Design txt file
+
+	In order to solve the project, I utilized both procedural and OO programming. I initially started out by using OOP in order to create my
+gameboard.py, tile_creator.py, and splashscreen.py modules, as I felt that the organizational structure that OOP has would be beneficial for the
+Functions I would need to create. In each of these modules, if there was a function needed that didn't require OOP's structure, I created the function
+As a procedural program (for example, my error_logging function in splashscreen.py). For my actual puzzle_game.py, I utilized procedural programming
+In order to manipulate my other modules in the way the project desired. Though I could have used OOP for this as well, I felt that I could use procedural
+Programming to better manipulate the functions I created.
+
+	Within my puzzle_game.py file, a key function that I created was "puzzle_maker", which utilized many of the functions that I created in the helper
+modules, manipulating them in a way to have them behave in the way I needed them to. Puzzle_maker also created key pieces such as my turtles, and
+solved_turtles dictionaries, which I used in order to check if the user had solved the puzzle. By updating the turtles dictionary each time the user
+Was able to swap a tile with the blank tile, then comparing the contents of the updated turtles dictionary with the solved_turtles dictionary, I was able
+To keep checking whether the user had successfully solved the puzzle. Another key component within my puzzle_maker function was the "callback" function,
+Which was essentially utilized to manipulate the behavior of the selected tile by calling functions created such as "swap_tile" and "next_to". The callback
+Function served as the gateway for each specific tile instance, where if the user clicks on it, and the conditionals are met, the tile instance would swap
+With the blank tile instance. Finally, a major component of puzzle_maker that I want to point out is the utilization of the nested for loops, which helped
+Me create the puzzle itself. Within the nested for loops, I created a turtle instance for each and every puzzle tile that was needed, because I knew that
+I would need the onclick turtle function for each turtle instance, so I consciously placed the onclick and callback functions within the nested for loops,
+Causing them to be lower ordered functions, and would also be specific to each turtle instance.
+
+	I tested my project in two ways. The first way I tested was by creating print statements, utilizing them throughout each and every function to ensure
+That I was manipulating everything the way I would need to, while also ensuring reusability, as I knew that pretty much every function I created would need to
+Be reused at a later time. The other method I used for testing was trying to break my code, whether that was by trying to manipulate the buttons or tiles in ways
+That it shouldn't have behaved, or inputting bad data to see if the corresponding error message was presented.
